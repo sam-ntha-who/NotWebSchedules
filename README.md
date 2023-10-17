@@ -5,7 +5,7 @@ This is a surgical employee scheduling application, inspired by one that was in 
 For reasons unknown to me, the original app was no longer supported (by the creator) and the OR started using excel and a nurse scheduling app. It is not a good replacement at all and makes those needing to deal with schedules do about 10x the work of the app. This is created in the hopes that a new app can make the lives of the schedulers a little bit easier.
 
 ##API
-This uses an API to provide CRUD functions as well as a web application to access the data through a UI. If using/testing locally, you will need to run both at the same time, on different ports. API: (link).
+This uses an API to provide CRUD functions as well as a web application to access the data through a UI. If using/testing locally, you will need to run both at the same time, on different ports. API: https://github.com/sam-ntha-who/NotWebSchedulesAPI/tree/main
 
 ###Database
 Currently this is set up for use with MongoDB but can be switched out in favor of other database types. In addition, I will be exploring storing data in excel documents and possibly other local/cloud options.
