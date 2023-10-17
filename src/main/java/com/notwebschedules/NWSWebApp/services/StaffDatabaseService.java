@@ -9,7 +9,7 @@ import org.springframework.http.MediaType;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
-import com.notwebschedules.NWSWebApp.models.StaffInfo.Staff;
+import com.notwebschedules.NWSWebApp.models.staffInfo.Staff;
 
 @Service
 public class StaffDatabaseService {

@@ -1,37 +1,37 @@
-package com.notwebschedules.NWSWebApp.models.Schedule;
+package com.notwebschedules.NWSWebApp.models.schedule;
 
 public enum ShiftType {
 
-	DAYS_0700_1100(7.0, 11.0, 4),
-	DAYS_0700_1530(7.0, 15.5, 8), 
-	DAYS_0700_1930(7.0, 19.5, 12),
-	DAYS_0900_1300(9.0, 13.0, 4),
-	DAYS_0900_1730(9.0, 17.5, 8),
-	AFTERNOONS_1100_1930(11.0, 19.5, 8),
-	AFTERNOONS_1100_2330(11.0, 23.5, 12),
-	AFTERNOONS_1500_1900(15.0, 19.0, 4),
-	AFTERNOONS_1500_2330(15.0, 23.5, 8),
-	MIDNIGHTS_1900_0730(19.0, 7.5, 12),
-	MIDNIGHTS_2300_0730(23.0, 7.5, 8);
+	DAYS_0700_1100("0700", "1100", 4),
+	DAYS_0700_1530("0700", "1530", 8), 
+	DAYS_0700_1930("0700", "1930", 12),
+	DAYS_0900_1300("0900", "1300", 4),
+	DAYS_0900_1730("0900", "1730", 8),
+	AFTERNOONS_1100_1930("1100", "1930", 8),
+	AFTERNOONS_1100_2330("1100", "2330", 12),
+	AFTERNOONS_1500_1900("1500", "1900", 4),
+	AFTERNOONS_1500_2330("1500", "2330", 8),
+	MIDNIGHTS_1900_0730("1900", "0730", 12),
+	MIDNIGHTS_2300_0730("2300", "0730", 8);
 	
 	// TODO: maybe make final?
 	
-	double startTime;
-	double endTime;
+	String startTime;
+	String endTime;
 	double shiftLength;
 	
-	ShiftType(double startTime, double endTime, double shiftLength) {
+	ShiftType(String startTime, String endTime, double shiftLength) {
 		this.startTime = startTime;
 		this.endTime = endTime;
 		this.shiftLength = shiftLength;
 		
 	}
 
-	public double getStartTime() {
+	public String getStartTime() {
 		return startTime;
 	}
 
-	public double getEndTime() {
+	public String getEndTime() {
 		return endTime;
 	}
 

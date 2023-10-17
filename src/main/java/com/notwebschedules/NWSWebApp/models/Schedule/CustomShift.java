@@ -1,21 +1,21 @@
-package com.notwebschedules.NWSWebApp.models.Schedule;
+package com.notwebschedules.NWSWebApp.models.schedule;
 
 public class CustomShift {
 
-	private double startTime;
-	private double endTime;
+	private String startTime;
+	private String endTime;
 	private double shiftLenght;
 	
-	public double getStartTime() {
+	public String getStartTime() {
 		return startTime;
 	}
-	public void setStartTime(double startTime) {
+	public void setStartTime(String startTime) {
 		this.startTime = startTime;
 	}
-	public double getEndTime() {
+	public String getEndTime() {
 		return endTime;
 	}
-	public void setEndTime(double endTime) {
+	public void setEndTime(String endTime) {
 		this.endTime = endTime;
 	}
 	public double getShiftLenght() {
@@ -25,7 +25,7 @@ public class CustomShift {
 		this.shiftLenght = shiftLenght;
 	}
 	
-	public CustomShift(double startTime, double endTime, double shiftLenght) {
+	public CustomShift(String startTime, String endTime, double shiftLenght) {
 		this.startTime = startTime;
 		this.endTime = endTime;
 		this.shiftLenght = shiftLenght;

@@ -1,6 +1,6 @@
-package com.notwebschedules.NWSWebApp.models.Schedule;
+package com.notwebschedules.NWSWebApp.models.schedule;
 
-import com.notwebschedules.NWSWebApp.models.StaffInfo.Staff;
+import com.notwebschedules.NWSWebApp.models.staffInfo.Staff;
 
 public class SingleDaySchedule {
 

@@ -1,4 +1,4 @@
-package com.notwebschedules.NWSWebApp.models.StaffInfo;
+package com.notwebschedules.NWSWebApp.models.staffInfo;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;

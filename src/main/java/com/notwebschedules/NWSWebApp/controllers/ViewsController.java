@@ -6,8 +6,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.notwebschedules.NWSWebApp.models.StaffInfo.Role;
-import com.notwebschedules.NWSWebApp.models.StaffInfo.Staff;
+import com.notwebschedules.NWSWebApp.models.staffInfo.Role;
+import com.notwebschedules.NWSWebApp.models.staffInfo.Staff;
 import com.notwebschedules.NWSWebApp.services.StaffDatabaseService;
 
 @Controller

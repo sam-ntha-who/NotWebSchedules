@@ -1,4 +1,4 @@
-package com.notwebschedules.NWSWebApp.models.StaffInfo;
+package com.notwebschedules.NWSWebApp.models.staffInfo;
 
 import com.notwebschedules.NWSWebApp.exceptions.RoleNotFoundException;
 
