@@ -9,10 +9,9 @@ public class CustomOnCallShift {
 	private boolean trauma;
 	private boolean hearts;
 	private boolean neuro;
+	private String shiftId;
 
-	
-	
-	public CustomOnCallShift(String startTime, String endTime, double shiftLength, 
+	public CustomOnCallShift(String startTime, String endTime, double shiftLength, String shiftId, 
 			boolean backup, boolean trauma, boolean hearts, boolean neuro) {
 		this.startTime = startTime;
 		this.endTime = endTime;
@@ -66,4 +65,12 @@ public class CustomOnCallShift {
 		this.neuro = neuro;
 	}
 	
+	public String getShiftId() {
+		return shiftId;
+	}
+
+	public void setShiftId(String shiftId) {
+		this.shiftId = shiftId;
+	}
+
 }

@@ -9,7 +9,7 @@ import org.springframework.http.MediaType;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
-import com.notwebschedules.NWSWebApp.models.staffInfo.Staff;
+import com.notwebschedules.NWSWebApp.models.staff.Staff;
 
 @Service
 public class StaffDatabaseService {
@@ -18,7 +18,7 @@ private RestTemplate rt = new RestTemplate();
 	
 	public Staff createStaff(Staff staff) {
 		
-		String url = "http://localhost:8081/create";
+		String url = "http://localhost:8081/create-new-staff";
 		
 		HttpHeaders headers = new HttpHeaders();
 		
@@ -32,7 +32,7 @@ private RestTemplate rt = new RestTemplate();
 	}
 	
 	public Staff getSingleStaffMemberById(String employeeId) {
-		String url = "http://localhost:8081/staff-profile";
+		String url = "http://localhost:8081/staff-profile/{employeeId}";
 		Staff response = rt.getForObject(url, Staff.class, employeeId);
 		return response;
 	}
@@ -55,5 +55,6 @@ private RestTemplate rt = new RestTemplate();
 		rt.delete(httpRequest.uri());
 		
 	}
+
 	
 }

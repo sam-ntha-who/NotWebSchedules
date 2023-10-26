@@ -4,8 +4,21 @@ public class CustomShift {
 
 	private String startTime;
 	private String endTime;
-	private double shiftLenght;
+	private double shiftLength;
+	private String shiftId;
 	
+	public double getShiftLength() {
+		return shiftLength;
+	}
+	public void setShiftLength(double shiftLength) {
+		this.shiftLength = shiftLength;
+	}
+	public String getShiftId() {
+		return shiftId;
+	}
+	public void setShiftId(String shiftId) {
+		this.shiftId = shiftId;
+	}
 	public String getStartTime() {
 		return startTime;
 	}
@@ -18,17 +31,12 @@ public class CustomShift {
 	public void setEndTime(String endTime) {
 		this.endTime = endTime;
 	}
-	public double getShiftLenght() {
-		return shiftLenght;
-	}
-	public void setShiftLenght(double shiftLenght) {
-		this.shiftLenght = shiftLenght;
-	}
 	
-	public CustomShift(String startTime, String endTime, double shiftLenght) {
+	public CustomShift(String startTime, String endTime, double shiftLength, String shiftId) {
 		this.startTime = startTime;
 		this.endTime = endTime;
-		this.shiftLenght = shiftLenght;
+		this.shiftLength = shiftLength;
+		this.shiftId = shiftId;
 	}
 	
 }

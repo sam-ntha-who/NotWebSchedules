@@ -1,4 +1,4 @@
-package com.notwebschedules.NWSWebApp.models.staffInfo;
+package com.notwebschedules.NWSWebApp.models.staff;
 
 public class Staff {
 

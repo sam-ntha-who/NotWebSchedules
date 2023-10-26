@@ -12,45 +12,62 @@ public class Shift {
 	private boolean trauma;
 	private boolean hearts;
 	private boolean neuro;
+	private String shiftId;
 	
-	ShiftType shiftType;
-	CustomShift customShift;
-	CallShiftType callShiftType;
-	CustomOnCallShift customOnCallShift;
+	private ShiftType shiftType;
+	private CustomShift customShift;
+	private CallShiftType callShiftType;
+	private CustomOnCallShift customOnCallShift;
 	
-	
-	public Shift(CustomShift customShift) {
-		this.startTime = this.customShift.getStartTime();
-		this.endTime = this.customShift.getEndTime();
-		this.shiftLength = this.customShift.getShiftLenght();
-		this.customShift = customShift;
+	public Shift() {
+		
 	}
 	
+//	public Shift(Shift shift) {
+//		this.startTime = shift.getStartTime();
+//		this.endTime = shift.getEndTime();
+//		this.shiftLength = shift.getShiftLength();
+//		this.backup = shift.isBackup();
+//		this.trauma = shift.isTrauma();
+//		this.hearts = shift.isHearts();
+//		this.neuro = shift.isNeuro();
+//		this.shiftId = shift.getShiftId();
+//	}
+	
+	public Shift(CustomShift customShift) {
+		this.startTime = customShift.getStartTime();
+		this.endTime = customShift.getEndTime();
+		this.shiftLength = customShift.getShiftLength();
+		this.shiftId = customShift.getShiftId();
+	}
+
 	public Shift(ShiftType shiftType) {
-		this.startTime = this.shiftType.getStartTime();
-		this.endTime = this.shiftType.getStartTime();
-		this.shiftLength = this.shiftType.getShiftLength();
-		this.shiftType = shiftType;
+		this.startTime = shiftType.getStartTime();
+		this.endTime = shiftType.getEndTime();
+		this.shiftLength = shiftType.getShiftLength();
+		this.shiftId = shiftType.getShiftId();
 	}
 	
 	public Shift(CallShiftType callShiftType) {
-		this.startTime = this.callShiftType.getStartTime();
-		this.endTime = this.callShiftType.getEndTime();
-		this.shiftLength = this.callShiftType.getShiftLength();
-		this.backup = this.callShiftType.isBackup();
-		this.trauma = this.callShiftType.isTrauma();
-		this.hearts = this.callShiftType.isHearts();
-		this.neuro = this.callShiftType.isNeuro();
+		this.startTime = callShiftType.getStartTime();
+		this.endTime = callShiftType.getEndTime();
+		this.shiftLength = callShiftType.getShiftLength();
+		this.backup = callShiftType.isBackup();
+		this.trauma = callShiftType.isTrauma();
+		this.hearts = callShiftType.isHearts();
+		this.neuro = callShiftType.isNeuro();
+		this.shiftId = callShiftType.getShiftId();
 	}
 	
 	public Shift(CustomOnCallShift customOnCallShift) {
-		this.startTime = this.callShiftType.getStartTime();
-		this.endTime = this.callShiftType.getEndTime();
-		this.shiftLength = this.callShiftType.getShiftLength();
-		this.backup = this.callShiftType.isBackup();
-		this.trauma = this.callShiftType.isTrauma();
-		this.hearts = this.callShiftType.isHearts();
-		this.neuro = this.callShiftType.isNeuro();
+		this.startTime = customOnCallShift.getStartTime();
+		this.endTime = customOnCallShift.getEndTime();
+		this.shiftLength = customOnCallShift.getShiftLength();
+		this.backup = customOnCallShift.isBackup();
+		this.trauma = customOnCallShift.isTrauma();
+		this.hearts = customOnCallShift.isHearts();
+		this.neuro = customOnCallShift.isNeuro();
+		this.shiftId = customOnCallShift.getShiftId();
 	}
 	
 	public String getStartTime() {
@@ -139,6 +156,15 @@ public class Shift {
 
 	public void setCustomOnCallShift(CustomOnCallShift customOnCallShift) {
 		this.customOnCallShift = customOnCallShift;
+	}
+	
+	
+	public String getShiftId() {
+		return shiftId;
+	}
+
+	public void setShiftId(String shiftId) {
+		this.shiftId = shiftId;
 	}
 	
 }

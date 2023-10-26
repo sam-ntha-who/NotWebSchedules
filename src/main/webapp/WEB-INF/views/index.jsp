@@ -18,6 +18,8 @@
 <a href="/addstaff" class="button">Add a staff member</a>
 <br><br>
 <a href="/remove" class="button">Remove a staff member</a>
+<br><br>
+<a href="/addschedule" class="button">Add schedule</a>
 </body>
 
 

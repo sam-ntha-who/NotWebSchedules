@@ -6,17 +6,16 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.notwebschedules.NWSWebApp.models.staffInfo.Role;
-import com.notwebschedules.NWSWebApp.models.staffInfo.Staff;
+import com.notwebschedules.NWSWebApp.models.staff.Role;
+import com.notwebschedules.NWSWebApp.models.staff.Staff;
 import com.notwebschedules.NWSWebApp.services.StaffDatabaseService;
 
 @Controller
-public class ViewsController {
+public class StaffViewsController {
 
 	@Autowired
 	StaffDatabaseService staffService;	
 	
-	// RequestMapping because they are all requests duh
 	@RequestMapping("/")
 	public String index() {
 		return "index";
@@ -47,6 +46,8 @@ public class ViewsController {
 		
 		if (secondaryPhone != null) {
 			staff.setSecondaryPhone(secondaryPhone);
+		} else {
+			staff.setSecondaryPhone("N/A");
 		}
 		
 		
@@ -54,7 +55,7 @@ public class ViewsController {
 		
 		staffService.createStaff(staff);
 		
-		return "AddStaff";
+		return "NewStaffMember";
 	}
 	
 	@RequestMapping("/newstaffmember")
@@ -70,7 +71,7 @@ public class ViewsController {
 		model.addAttribute("role", role);
 		return "NewStaffMember";
 	}
-	// this one works as expected!
+
 	@RequestMapping("/allstaff")
 	public String showAllStaffMembers(Model model) {
 		Staff[] allStaff = staffService.getAllStaff();

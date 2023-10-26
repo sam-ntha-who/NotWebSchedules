@@ -14,7 +14,6 @@
 <h2>This is not web schedules</h2>
 
 <form action="/addnewstaff">
-<!-- <form action="/addStaff" method="post"> -->
 
 	<label for="firstName">First Name:</label><br>
 	<input name="firstName" type="text"/><br>
